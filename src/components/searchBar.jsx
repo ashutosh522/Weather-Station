@@ -20,8 +20,8 @@ const SearchBar = ({ onSearch, onReset }) => {
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
-      <button onClick={handleReset}>Reset</button>
+      <button className="search" onClick={handleSearch}>Search</button>
+      <button className="reset" onClick={handleReset}>Reset</button>
     </div>
   );
 };

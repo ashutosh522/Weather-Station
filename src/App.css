@@ -12,7 +12,7 @@ body {
   margin-top: 20px;
   justify-content: center;
   align-items: center;
-  background-image: url('./bgd.jpg');
+  background-image: url('../bgd.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -24,7 +24,6 @@ body {
 
   padding: 40px;
   border-radius: 15px;
-
   width: 100%;
   max-width: 500px;
   text-align: center;
@@ -52,7 +51,7 @@ h1 {
   font-size: 1rem;
   background-color: white;
   color: black;
-  
+
 
 }
 
@@ -67,16 +66,22 @@ h1 {
 }
 
 .search-bar button {
-  
-  
   border-radius: 10px;
-      background-color: tomato;
-      border-color: gold;
-      padding: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      font-weight: 500;
-  
+  background-color: tomato;
+  border-color: gold;
+  padding: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+
+}
+
+.search {
+  background-color: powderblue;
+}
+
+.reset {
+  background-color: palegreen;
 }
 
 .search-bar button:active {
