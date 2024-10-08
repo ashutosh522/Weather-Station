@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-//import axios from 'axios';
 import SearchBar from './components/searchBar';
 import WeatherDisplay from './components/weatherDisplay';
-import Error from './components/Error';
 import './App.css';
 
 function App() {
@@ -35,7 +33,6 @@ function App() {
       
       
       <SearchBar onSearch={fetchWeather} onReset={handleReset} />
-      <Error message={error} />
       <WeatherDisplay weather={weather} />
     </div>
     </>
