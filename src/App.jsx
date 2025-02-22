@@ -7,7 +7,7 @@ function App() {
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState('');
 
-  const API_KEY = 'c7c2395753b8ba9b3b878aa747a168a6'; // Replace with your OpenWeatherMap API Key
+  const API_KEY = 'c7c2395753b8ba9b3b878aa747a168a6'; 
 
   const fetchWeather = async (city) => {
     try {
@@ -28,13 +28,12 @@ function App() {
 
   return (
     <>
-    <h1>My Weather Station</h1>
-    <div className="app">
-      
-      
-      <SearchBar onSearch={fetchWeather} onReset={handleReset} />
-      <WeatherDisplay weather={weather} />
-    </div>
+
+      <p class="h1 text-center glowing-text">My Weather Station</p>
+      <div className="app">
+        <SearchBar onSearch={fetchWeather} onReset={handleReset} />
+        <WeatherDisplay weather={weather} />
+      </div>
     </>
   );
 }

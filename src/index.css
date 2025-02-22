@@ -1,0 +1,47 @@
+body {
+  background-color: black;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  color: white;
+ 
+}
+.glowing-text {
+  font-size: 50px;
+  color: white; /* Text color */
+  text-align: center;
+  text-shadow: 
+    0 0 5px rgba(0, 255, 255, 0.7),  /* light glow */
+    0 0 10px rgba(0, 255, 255, 0.7), /* stronger glow */
+    0 0 15px rgba(0, 255, 255, 0.7), /* even stronger glow */
+    0 0 20px rgba(0, 255, 255, 0.7), /* intense glow */
+    0 0 25px rgba(0, 255, 255, 0.7); /* super intense glow */
+}
+.glowing-border {
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border: 3px solid #0ff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  animation: glowing 1.5s infinite ease-in-out;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+    border-color: #0ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+    border-color: #00bfff;
+  }
+  100% {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+    border-color: #0ff;
+  }
+}

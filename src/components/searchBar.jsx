@@ -12,17 +12,23 @@ const SearchBar = ({ onSearch, onReset }) => {
     onReset();
   };
 
+  function onKeyPress(e){
+    if(e.key === 'Enter'){
+      handleSearch();
+      }
+  }
+
   return (
-    <div className="search-bar">
-      <input
-        type="text"
-        placeholder="Enter city name"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-      />
-      <button className="search" onClick={handleSearch}>Search</button>
-      <button className="reset" onClick={handleReset}>Reset</button>
-    </div>
+
+    <>
+      <div class="input-group" style={{width:'70%', justifySelf: 'center'}}>
+        <input type="text" class="form-control" placeholder="Enter city name" aria-label="Recipient's username with two button addons"  value={city} onKeyDown={onKeyPress}
+          onChange={(e) => setCity(e.target.value)} />
+        <button class="btn btn-info" disabled={!city} type="button" onClick={handleSearch} 
+        >Search</button>
+        <button class="btn btn-warning" type="button" onClick={handleReset}>Reset</button>
+      </div>
+    </>
   );
 };
 
